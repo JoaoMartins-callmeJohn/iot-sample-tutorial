@@ -8,15 +8,15 @@ permalink: /adapting/home/
 
 # Adaptando aos seus dados
 
-Agora vamos ajustar o exemplo aos nossos dados.
+Agora o passo é ajustar o exemplo aos dados.
 
 ## Configurando model urn e view guid
 
-Primeiro vamos adicionar nosso modelo, vista e data de início e fim.
+Primeiro deve-se adicionar o modelo, vista e data de início e fim.
 
-Basta modificarmos o arquivo [public/config.js](https://github.com/autodesk-platform-services/aps-iot-extensions-demo/blob/master/public/config.js)
+Para tanto, pode-se modificar o arquivo [public/config.js](https://github.com/autodesk-platform-services/aps-iot-extensions-demo/blob/master/public/config.js)
 
-- `APS_MODEL_URN` deve conter o valor da urn do nosso modelo, que pode ser facilmente obtida com a ajuda da nossa extensão através do manifesto
+- `APS_MODEL_URN` deve conter o valor da urn do modelo, que pode ser facilmente obtida com a ajuda da nossa extensão através do manifesto
 
 ![get model urn](../../assets/images/get_model_urn.gif)
 
@@ -24,23 +24,23 @@ Basta modificarmos o arquivo [public/config.js](https://github.com/autodesk-plat
 
 ![get view guid](../../assets/images/get_view_guid.gif)
 
-- `APS_MODEL_DEFAULT_FLOOR_INDEX`, `DEFAULT_TIMERANGE_START` e `DEFAULT_TIMERANGE_END` devem ser modificadas em concordância com o seu modelo para comtrolar nível padrão a ser exibido e o intervalo dos dados dos sensores.
+- `APS_MODEL_DEFAULT_FLOOR_INDEX`, `DEFAULT_TIMERANGE_START` e `DEFAULT_TIMERANGE_END` devem ser modificadas em concordância com o modelo para controlar nível padrão a ser exibido e o intervalo dos dados dos sensores.
 
-Uma vez definidas essas variáveis podemos iniciar o exemplo com o comando `yarn start`
+Uma vez definidas essas variáveis pode-se iniciar o exemplo com o comando `yarn start`
 
 ![custom model](../../assets/images/custom_model.gif)
 
 ## Ajustando os sensores
 
-Como foi possivel ver, os sensores estão localizados em posições aleatórias, sem fazer sentido no contexto do nosso modelo.
+Como é possível perceber, os sensores estão localizados em posições aleatórias, sem fazer sentido no contexto do modelo.
 
-O nosso primeiro passo é determinar a posição dos sensores e os ambientes nos quais os mesmos estão localizados.
+O primeiro passo é determinar a posição dos sensores e os ambientes nos quais os mesmos estão localizados.
 
-Aqui temos duas possibilidades:
+Aqui têm-se duas possibilidades:
 
 1. Os sensores estão presentes na cena como elementos do modelo:
 
-- Nesse caso precisamos obter a posição dos sensores na cena, e para isso podemos contar com a ajuda de um método presente no blog [Placing custom markup by dbId](https://aps.autodesk.com/blog/placing-custom-markup-dbid) (fique à vontade para lê-lo quando tiver um tempo). Esse blog apresenta uma extensão com oo passo a passo para sobrepor uma div na cena do modelo. Para isso ele conta com um método para obter a posição do centro de um elemento do modelo a partir de seu dbId. A partir dessa extensão chegamos à função abaixo que pode nos ajudar a encontrar essa posição:
+- Nesse caso, precisa-se obter a posição dos sensores na cena, e para isso recomenda-se contar com a ajuda de um método presente no blog [Placing custom markup by dbId](https://aps.autodesk.com/blog/placing-custom-markup-dbid) (sinta-se à vontade para lê-lo quando tiver tempo disponível). Esse blog apresenta uma extensão com o passo a passo para sobrepor uma div na cena do modelo. Para isso, ele conta com um método para obter a posição do centro de um elemento do modelo a partir de seu dbId. A partir dessa extensão, chega-se à função abaixo que pode auxiliar a encontrar essa posição:
 
 ```js
 var getModifiedWorldBoundingBox = function(dbId) {
@@ -64,12 +64,12 @@ var getModifiedWorldBoundingBox = function(dbId) {
 }
 ```
 
-Para obter a posição central de um elemento podemos seguir as etapas
+Para obter a posição central de um elemento pode-se seguir as etapas
   - copiar e colar essa função no console
 
 ![copy n paste](../../assets/images/copy_paste_function_console.gif)
 
-  - selecionar um elemento  e digitar `NOP_VIEWER.getSelection()` no console para obter seu dbId
+  - selecionar um elemento e digitar `NOP_VIEWER.getSelection()` no console para obter seu dbId
 
 ![selected element dbid](../../assets/images/selected_element_dbid.gif)
 
@@ -77,15 +77,15 @@ Para obter a posição central de um elemento podemos seguir as etapas
 
 ![element center](../../assets/images/element_center.gif)
 
-Desse modo obteremos a posição do seu centro na cena.
+Desse modo, será obtida a posição do seu centro na cena.
 
-No caso do nosso exemplo seria `x: 102.20546340942383, y: -184.69332885742188, z: -14.37007999420166`
+No caso deste exemplo seria `x: 102.20546340942383, y: -184.69332885742188, z: -14.37007999420166`
 
 Voltando ao outro caso possível:
 
 2. Os sensores não estão representados no modelo:
 
-- Nesse caso podemos reagir ao clique na tela do usuário para apresentar a posição equivalente no console.
+- Nesse caso, pode-se reagir ao clique na tela do usuário para apresentar a posição equivalente no console.
 
 ```js
 NOP_VIEWER.container.addEventListener('click', function (ev) {
@@ -96,7 +96,7 @@ NOP_VIEWER.container.addEventListener('click', function (ev) {
 });
 ```
 
-Basta copiar e colar esse trecho no console e clicar na posição que você deseja colocar o seu sensor
+Basta copiar e colar esse trecho no console e clicar na posição que deseja colocar o sensor
 
 ![click position](../../assets/images/click_position.gif)
 
@@ -108,9 +108,9 @@ Para isso, basta selecionar o ambiente e digitar `NOP_VIEWER.getSelection()` no 
 
 ## Adaptando iot.mocked.js
 
-Por fim, devemos ajustar o arquivo `iot.mocked.js` com os valores encontrados anteriormente para as posições dos sensores e dbids dos ambientes
+Por fim, deve-se ajustar o arquivo `iot.mocked.js` com os valores encontrados anteriormente para as posições dos sensores e dbids dos ambientes
 
-No nosso caso, o arquivo ficou da seguite maneira
+Neste caso, o arquivo ficou da seguite maneira:
 
 ```js
 const SENSORS = {
@@ -246,6 +246,6 @@ module.exports = {
 
 ![iot mocked](../../assets/images/iot_mocked.gif)
 
-Com isso teremos nosso modelo pronto com os sensores customizados.
+Logo, o modelo estará pronto com os sensores customizados.
 
-A próxima etapa é adicionar os dados dos sensores em tempo real, porém essa parte não será coberta nesse tutorial.
+A próxima etapa consiste em adicionar os dados dos sensores em tempo real, porém essa parte não será coberta nesse tutorial. Recomendações de evoluir de maneira robusta com as aplicações serão atualizadas neste GitHub.
