@@ -12,6 +12,6 @@ Se você é um usuário iniciante, por favor, navegue pelo [tutorial principal](
 
 Você também pode encontrar o código-fonte completo do principal exemplo utilizado aqui no [github](https://github.com/autodesk-platform-services/aps-iot-extensions-demo).
 
-Também há uma demonstração em tempo real disponível [aqui](https://aps-iot-extensions-demo.autodesk.io/)
+Também há uma demonstração em tempo real disponível [aqui](https://aps-iot-extensions-demo.autodesk.io/).
 
-Caso tenha sugestões ou dúvidas, entre em contato conosco através do [suporte](mailto:aps.help@autodesk.com)
+Caso tenha sugestões ou dúvidas, entre em contato conosco através do [suporte](mailto:aps.help@autodesk.com).
