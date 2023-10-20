@@ -15,15 +15,15 @@ Ao término dessa etapa, o modelo base estará pronto para conexão, disponível
 
 2. O próximo requisito consiste em disponibilizar o modelo na nuvem para conversão e visualização. Há diversas formas de realizar essa tarefa, como descrito [nesse passo a passo](https://aps.autodesk.com/en/docs/data/v2/tutorials/app-managed-bucket/), porém para simplificar este tutorial (agora e em futuros desenvolvimentos) recomenda-se o uso de uma extensão desenvolvida para o VS Code. Para tanto, é apenas seguir o passo a passo desse blog: https://aps.autodesk.com/blog/forge-visual-studio-code para instalar essa extensão.
 
-- Uma vez com a extensão instalada, cria-se um bucket
+- Uma vez com a extensão instalada, cria-se um bucket, conforme imagem abaixo:
 
 ![create bucket](../../assets/images/create_bucket.gif)
 
-- e faz-se o upload do modelo
+- E faz-se o upload do modelo:
 
 ![upload file](../../assets/images/upload_file.gif)
 
-- Para concluir essa parte, deve-se iniciar a tradução do arquivo. Aqui é de extrema importância traduzir o modelo BIM gerando os ambientes. Você pode conferir mais detalhes [nesse passo-a-passo](https://aps.autodesk.com/en/docs/model-derivative/v2/tutorials/prep-roominfo4viewer/) e [nessa lightning talk](https://youtu.be/GgW9gBCRrWg?t=232). Para facilitar, pode-se utilizar o método customizado da extensão
+- Para concluir essa parte, deve-se iniciar a tradução do arquivo. Aqui é de extrema importância traduzir o modelo BIM gerando os ambientes. Você pode conferir mais detalhes [nesse passo-a-passo](https://aps.autodesk.com/en/docs/model-derivative/v2/tutorials/prep-roominfo4viewer/) e [nessa lightning talk](https://youtu.be/GgW9gBCRrWg?t=232). Para facilitar, pode-se utilizar o método customizado da extensão.
 
 ![upload file](../../assets/images/start_translation.gif)
 
