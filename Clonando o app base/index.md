@@ -29,10 +29,9 @@ Basicamente, deve-se:
 - Iniciar o exemplo com o comando `yarn start`
 
 Dessa forma, será possível verificar o app navegando até http://localhost:3000
-
 ![localhost 3000](../../assets/images/localhost_3000.png)
 
-O exemplo está funcionando, porém ainda falta ajustar os dados (modelo e sensores). 
+O exemplo estará funcionando, entretanto ainda será necessário ajustar os dados (modelo e sensores). 
 Esse passo será realizado na próxima etapa.
 
 [Próximo passo - Adaptando aos seus dados]({{ site.baseurl }}/adapting/home/){: .btn}
