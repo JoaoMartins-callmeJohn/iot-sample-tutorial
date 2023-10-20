@@ -25,7 +25,7 @@ Para desenvolver essa solução há etapas cruciais, como a definição do model
 É recomendável experiência com desenvolvimento Web para explorar os maiores benefícios do presente tutorial.
 As ferramentas utilizadas e recomendadas para reproduzir as próximas etapas são: (i) o [Visual Studio Code](https://code.visualstudio.com/) como ambiente de desenvolvimento; (ii) e o [Node js](https://nodejs.org/en/), para desenvolver o exemplo. Tendo em vista a simplificação de algumas etapas, será adotada a [extensão do VS Code para APS(anteriormente Forge)](https://marketplace.visualstudio.com/items?itemName=petrbroz.vscode-forge-tools).
 
-Para aqueles que estão dando os primeiro passos com a Autodesk Platform Services, recomendamos sempre este [tutorial](http://aps.autodesk.com/tutorials) como caminho introdutório!
+Para aqueles que estão dando os primeiro passos com a Autodesk Platform Services, sugere-se sempre este [tutorial](http://aps.autodesk.com/tutorials) como caminho introdutório!
 
 O tutorial é dividido em 3 macro etapas:
 
